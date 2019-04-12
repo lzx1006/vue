@@ -25,7 +25,7 @@ export const constantRouterMap = [
         path: '',
         component: _import('trade/index'),
         name: 'trade',
-        meta: { title: '交易', requiresAuth: false }
+        meta: { title: '交易区', requiresAuth: false }
       }
     ]
   },
@@ -37,7 +37,7 @@ export const constantRouterMap = [
         path: '',
         component: _import('tradePlant/index'),
         name: 'tradePlant',
-        meta: { title: '', requiresAuth: false }
+        meta: { title: '买卖盘', requiresAuth: false }
       }
     ]
   },
@@ -49,7 +49,7 @@ export const constantRouterMap = [
         path: '',
         component: _import('tradeDetail/index'),
         name: 'tradeDetail',
-        meta: { title: '', requiresAuth: false }
+        meta: { title: '交易区详情', requiresAuth: false }
       }
     ]
   },

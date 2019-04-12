@@ -1,6 +1,4 @@
-# otctrade
 
-> otctrade detail
 
 ## Build Setup
 

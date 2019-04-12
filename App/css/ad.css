@@ -1,0 +1,30 @@
+/*资讯详情页*/
+.nd-content{
+  text-align: center;
+  color: #787878;
+  padding: 60px 0;
+  background: white;
+  font-size: 13px;
+}
+
+.nd-content h4{
+  font-size: 16px;
+  color: #3e4558;
+}
+
+.nd-content .time{
+  padding-left: 25px;
+  font-size: 12px;
+}
+.nd-content .nd-content-detail{
+  padding: 13px 0;
+  margin: 0 17px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 26px;
+  border-top: 1px #ebecf1 dashed;
+}
+
+.nd-content .user-proto{
+  margin: 28px 25px;
+}

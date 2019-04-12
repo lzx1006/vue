@@ -1,0 +1,280 @@
+@import "./transition";
+@violet: rgba(31, 168, 246, 1);
+@green: #02c56c;
+@red: rgb(255, 91, 92);
+
+.c-violet{
+  color: @violet;
+}
+.c-green{
+  color: @green !important;
+}
+.c-red{
+  color: @red !important;
+}
+body,h1, h2, h3, h4, h5, p, ul{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: #f7f7fa;
+  min-width: 1200px;
+}
+.bgWhite{
+  background: white !important;
+}
+.bgBlack{
+  background: #25283c !important;
+}
+.bgGray{
+  background: #f7f7fa;
+}
+.pull-left{
+  float: left;
+}
+.pull-right{
+  float: right;
+}
+.cursorP{
+  cursor: pointer;
+}
+.clearfix{
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+ul li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.t-center{
+  text-align: center;
+}
+.m-auto{
+  margin: 0 auto;
+}
+.hr{
+  width: 100%;
+  height: 1px;
+  background: #dde6ec;
+}
+// 紫色边框，无背景按钮
+.violet-border-btn,
+.violet-border-btn:hover,
+.violet-border-btn:focus{
+  border: 1px solid @violet;
+  color: @violet;
+}
+
+.textalign-r{
+  text-align: right;
+}
+.sell-btn,
+.sell-btn:hover,
+.sell-btn:active,
+.sell-btn:focus{
+  background: @green;
+  width: 103px;
+  height: 39px;
+  color: white;
+  border: none;
+}
+.light-violet-btn:hover,
+.sell-btn:hover,
+.buy-btn:hover{
+  opacity: 0.8;
+}
+.buy-btn,
+.buy-btn:hover,
+.buy-btn:active,
+.buy-btn:focus{
+  background: @red;
+  width: 103px;
+  height: 39px;
+  color: white;
+  border: none;
+}
+.hidden{
+  display: none;
+}
+.el-main {
+  padding: 8px !important;
+}
+.el-footer{
+  padding: 0 !important;
+}
+
+.page {
+  padding: 40px 0 60px !important;
+  text-align: center !important;
+}
+.el-table__body, .el-table__footer{
+  font-size: 12px !important;
+}
+.el-table__header{
+  font-size: 13px !important;
+}
+.el-table th{
+  background: #f8f8f8;
+  font-weight: normal;
+}
+.el-popover{
+  // 币币账户和OTC账户的二维码popover内文字样式
+  .qrcode-address-text{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+.light-violet-btn,
+.light-violet-btn:hover,
+.light-violet-btn:active,
+.light-violet-btn:focus{
+  background: #b19be3;
+  width: 103px;
+  height: 39px;
+  color: white;
+  border: none;
+  padding: 8px 35px;
+  border-radius: 2px;
+}
+
+.nav-bread{
+  padding-bottom: 10px;
+  color: #c5c7cf;
+  font-size: 12px;
+  a{
+    font-size: 12px;
+    color: #c5c7cf;
+  }
+}
+// 左侧菜单样式
+.navleft{
+  width: 213px;
+  padding-bottom: 50px !important;
+  background: white;
+  .el-submenu .el-menu-item {
+    padding: 0 69px !important; 
+  }
+  .el-submenu__title{
+    padding-left: 30px !important;
+    font-size: 16px;
+    i{
+      padding-left: 15px;
+      padding-right: 5px;
+    }
+  }
+  .el-menu-item-group__title{
+    padding: 0;
+  }
+  .el-submenu .el-menu-item{
+    line-height: 40px;
+    height: 40px;
+  }
+  .el-menu-item.is-active{
+    background: rgba(23, 100, 232, .1);
+  }
+  .el-submenu__title i{
+    color: #303133;
+  }
+}
+
+.nav-bread{
+  padding-bottom: 10px;
+  color: #c5c7cf;
+  font-size: 12px;
+  a{
+    font-size: 12px;
+    color: #c5c7cf;
+  }
+}
+.r-content{
+  width: 967px;
+}
+a:focus{outline:none;}
+.el-dialog__header {
+  padding: 15px 20px 13px;
+  background: #f1eff4;
+}
+.el-dialog__title{
+  font-size: 16px;
+}
+.box {
+  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.wrap{
+  width: 160px;
+  max-width: 160px;
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+  overflow: hidden; 
+}
+
+body{
+  font-family:"Microsoft YaHei","黑体","宋体","Helvetica","Arial",sans-serif !important;
+}
+.min-height{
+  min-height: 500px;
+}
+ 
+.c-616{
+  color: #61688a !important;
+}
+
+.is-scrolling-none::-webkit-scrollbar,
+{/*滚动条整体部分，其中的属性有width,height,background,border等（就和一个块级元素一样）（位置1）*/  
+  width:6px;  
+  height:60px;  
+}  
+.is-scrolling-none::-webkit-scrollbar-button{/*滚动条两端的按钮，可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果（位置2）*/  
+      /*background:#74D334;*/
+  display:none  
+}
+.is-scrolling-none::-webkit-scrollbar-track{/*外层轨道，可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果（位置3）*/  
+  display:none
+      /*background:#FF66D5;*/  
+}
+.is-scrolling-none::-webkit-scrollbar-track-piece{/*内层轨道，滚动条中间部分（位置4）*/  
+      /*background:#FF66D5;*/  
+}  
+.is-scrolling-none::-webkit-scrollbar-thumb{/*滚动条里面可以拖动的那部分（位置5）*/  
+  background:#dedede;  
+  border-radius:4px;  
+}  
+.is-scrolling-none::-webkit-scrollbar-corner {/*边角（位置6）*/  
+  background:#dedede;   
+}  
+.is-scrolling-none::-webkit-scrollbar-resizer  {/*定义右下角拖动块的样式（位置7）*/  
+  background:#dedede;  
+}  
+
+.is-scrolling-none{
+  scrollbar-arrow-color: #dedede; /*三角箭头的颜色*/
+  scrollbar-face-color: #dedede; /*立体滚动条的颜色（包括箭头部分的背景色）*/
+  scrollbar-3dlight-color: #dedede; /*立体滚动条亮边的颜色*/
+  scrollbar-highlight-color: #dedede; /*滚动条的高亮颜色（左阴影？）*/
+  scrollbar-shadow-color: #dedede; /*立体滚动条阴影的颜色*/
+  scrollbar-darkshadow-color: #dedede; /*立体滚动条外阴影的颜色*/
+  scrollbar-track-color: #dedede; /*立体滚动条背景颜色*/
+  scrollbar-base-color:#dedede; /*滚动条的基色*/
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}

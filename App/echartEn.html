@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta name="description" content="">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->        
+        <meta name="HandheldFriendly" content="True">
+        <meta content="email=no" name="format-detection" />
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+              
+        <!--ClearType主要是针对LCD液晶显示器设计，可提高文字的清晰度。-->
+        <meta http-equiv="cleartype" content="on">
+        <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <meta name="format-detection" content="telphone=no, email=no"/>
+
+        <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+        <script type="text/javascript" src="js/echarts.min.js"></script>
+        <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+        
+        <!--要CSS伪类 :active 生效，只需要给 document 绑定 touchstart 或 touchend 事件-->
+        <script>
+          document.addEventListener('touchstart',function(){},false);
+          document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+        </script>
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/echart.css"/>
+        <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+    </head>
+    <body>
+      
+        <div id="" class="container">
+        	<div class="row title">
+        	  <div id="">
+        	  	<div class="c-green new last_price"></div>
+        	  	<p id="about" class='last_price_cny'> </p>
+        	  </div>
+        	  <div id="" class="des">
+        	  	<p>H： <span class="tooltip-high" id="big_price"></span></p>
+        	  	<p>L： <span class="tooltip-low" id="small_price"></span></p>
+        	  	<p>24H Total：<span id="trade_count_num"></span></p>
+        	  </div>
+        	</div>
+        	<div class="row time k-echart-btn">
+        	  <div id="" class="active" data-type="min5">
+        	  	5min
+        	  </div>
+        	  <div id="" data-type="min15">
+              15min
+            </div>
+            <div id="" data-type="min30">
+              30min
+            </div>
+            <div id="" data-type="hou1">
+              1hour
+            </div>
+            <div id="" data-type="hou8">
+              8hour
+            </div>
+            <div id="" data-type="days">
+              1 day
+            </div>
+        	</div>
+        
+          <div class="k-echart-container">
+            <div id="k-echart" style="width: 100%;height:550px;"></div>
+            <!--<div class="k-echart-tooltips">开=<span class="tooltip-open"></span>高=<span class="tooltip-high"></span>低=<span class="tooltip-low"></span>收=<span class="tooltip-close"></span></div>-->
+          </div>
+          <div class="deep-echart-container">
+            <div class="title">Depth map</div>
+            <div class="deep-echart-tips">
+              <div class="buy clearfix"><span></span>Buy</div>
+              <div class="sell clearfix"><span></span>Sell</div>
+            </div>
+            <div id="deep-echart" style="width: 100%;height:550px;"></div>
+          </div>
+        </div>
+        
+        <script src="js/vendor/jquery-2.1.0.min.js"></script>
+        <script src="js/helper.js"></script>
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/tradeDetail.js"></script>
+        <script src="js/echart.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
